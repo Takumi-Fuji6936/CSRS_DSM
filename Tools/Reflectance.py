@@ -51,9 +51,7 @@ def Reflectance(im_svf,im_shadow,Lamda,tar_Band,SRF_S,SP_leaf,IR,date_Y,date_M,d
 		#print(B)
 
 		if B!='B11' and B!='B12':
-
-			#band_dict = {'B02':'B2','B03':'B3','B04':'B4'}
-			
+		
 			temp_SRF = SRF_S.iloc[:,N][(SRF_S["SR_WL"]>=Lamda_1*10**3)&(SRF_S["SR_WL"]<=Lamda_2*10**3)]
 			SRF_value = np.array(temp_SRF)
 			SRF_sum = SRF_value.sum()
@@ -64,8 +62,10 @@ def Reflectance(im_svf,im_shadow,Lamda,tar_Band,SRF_S,SP_leaf,IR,date_Y,date_M,d
 			#grass_value = np.array(temp_grass)/100
 
 			N+=1
-			
-			#num_band = 5
+
+		if B == tar_Band:
+			print(B)
+
 			Out = np.zeros((Sat_x_pixels,Sat_y_pixels))
 
 			try:
@@ -97,11 +97,9 @@ def Reflectance(im_svf,im_shadow,Lamda,tar_Band,SRF_S,SP_leaf,IR,date_Y,date_M,d
 			#Reflectance of virtual forest
 			II = (3.1415 * II /  ( b.mean()+ c.mean() ))
 			Out = II
-			#i+=1
-			#print(0)
 			
-		if B == tar_Band:
-			print(B)
+			
+		
 						
 			driver = gdal.GetDriverByName('GTiff')
 			
