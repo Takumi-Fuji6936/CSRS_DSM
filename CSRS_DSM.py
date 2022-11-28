@@ -44,8 +44,8 @@ SP_leaf = pd.read_csv("Parameter\\SR\\canopy.txt",delim_whitespace=True,names=("
 #指定した日におけるバンドごとの放射照度
 IR = "Parameter\\Irradiance"
 """
-#mac
 
+#mac
 inp = "inp/raster100cm.tif"
 out_z ="temp/Normal.tif"
 out_h = "temp/Horizon/"
