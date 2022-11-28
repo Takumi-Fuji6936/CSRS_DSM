@@ -1,0 +1,188 @@
+
+******************   SMARTS, version 2.9.5   *******************
+
+ Simple Model of the Atmospheric Radiative Transfer of Sunshine
+     Chris A. Gueymard, Solar Consulting Services
+                    December 2005
+
+    This model is documented in FSEC Report PF-270-95
+ and in a Solar Energy paper, vol. 71, No.5, 325-346 (2001)
+
+ NOTE: These references describe v. 2.8 or earlier!!!
+ See the User's Manual for details on the considerable 
+ changes that followed...
+
+****************************************************************
+
+   Reference for this run: USSA_AOD=0.084_ASTM_G173                                        
+
+----------------------------------------------------------------
+
+* ATMOSPHERE : TRL         AEROSOL TYPE: S&F_RURAL                                                       
+
+* INPUTS:
+     Pressure (mb) = 1013.250   Ground Altitude (km) =   0.0148
+     Height above ground (km) =   0.0000
+     Relative Humidity (%) = 75.549   Precipitable Water (cm) =  4.0893
+     Ozone (atm-cm) = 0.2776 or 277.6 Dobson Units
+   AEROSOLS:  Optical Depth at 500 nm = 0.0840      Optical depth at 550 nm = 0.0734
+       Angstrom's Beta = 0.0315       Schuepp's B = 0.0365
+     Meteorological Range (km) =  131.3   Visibility (km) =  100.5
+     Alpha1 = 0.9516  Alpha2 = 1.4171   Mean Angstrom's Alpha = 1.1844
+     Season = SPRING/SUMMER           
+
+* TEMPERATURES:
+     Instantaneous at site's altitude = 299.6 K
+     Daily average (reference) at site's altitude = 299.6 K
+     Stratospheric Ozone and NO2 (effective) = 229.6 K
+
+** WARNING #13 *********
+\\ Ground reflectance data for USER_DEFINED            
+\\ extend only from 0.3000 to 3.0000 \B5m,
+\\ whereas the wavelength limits for this run are 0.2800 and 4.0000 \B5m.
+\\ Consequently, reflectance is fixed at 0.002 below 0.3000 \B5m and at 0.000 above 3.0000 \B5m.
+
+
+
+The following spectral variables will be output to file: smarts295.ext.txt       
+
+ * Extraterrestrial_spectrm
+ * Direct_normal_irradiance
+ * Difuse_horizn_irradiance
+ * Global_horizn_irradiance
+ * Direct_horizn_irradiance
+
+
+      Spectral ZONAL albedo data: USER_DEFINED            
+      with a reflection process: LAMBERTIAN              
+
+
+* GEOMETRY (half-angles) OF THE SIMULATED RADIOMETER (deg.):
+   Slope =  1.78      Aperture =  2.91   Limit =  4.03
+
+
+====================================================================================================
+====================================================================================================
+
+* SOLAR POSITION (deg.):
+    Zenith Angle (apparent) = 42.558  Azimuth (from North) =  159.46
+
+      RELATIVE OPTICAL MASSES:
+  - Rayleigh =  1.356
+  - Water Vapor =  1.357
+  - Ozone =  1.356
+  - NO2 =  1.357
+  - Aerosols =  1.357
+
+  Results below are for this specific day:
+ Year = 2020   Month = 12  Day = 13   Hour (LST) = 11.000   Day of Year = 348
+   In Universal Time:
+   Day (UT) = 13   Hour (UT) =  4.500
+   Julian Day =  2459196.750  Declination = -23.178 deg.  Radius vector = 0.98443   Equation of Time (min) =   5.755
+   Local Apparent Time (or Solar Time):  11.003
+
+
+
+ CO2 Mixing Ratio (ppmv):  370.0
+
+
+
+ Total column abundances (atm-cm) for all gases except H2O, and for normal/standard conditions:
+
+    BrO       CH2O        CH4      ClNO3         CO        CO2       HNO2       HNO3        NH3
+
+0.2500E-05 0.3000E-03 0.1329E+01 0.1200E-03 0.8752E-01 0.2970E+03 0.1000E-03 0.3809E-03 0.1698E-03
+
+
+     NO        NO2        NO3         N2        N2O         O2         O3         O4        SO2
+
+0.3173E-03 0.2112E-03 0.5000E-04 0.3687E+06 0.2477E+00 0.1678E+06 0.2776E+00 0.1678E+06 0.1082E-03
+
+
+
+
+*  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *
+
+** SPECTRUM:
+   Total (0-100 \B5m) Extraterrestrial Irradiance used here = 1409.67 W/m2
+  (i.e., 1.0319 times the selected solar constant, 1366.10 W/m2, due to the actual Sun-Earth distance.)
+   Source for selected solar spectrum: Gueymard_2004                                                   
+
+*** IRRADIANCES IN W/m2 nm FOR A GIVEN WAVELENGTH (in nm)
+
+WVLGTH  SPCTRM      BEAM        DIFF        GLOB        BEAM_EXP        DIFF        GLOB
+                   NORMAL   ------ HORIZONTAL -----   -- NORMAL--       ---- TILTED PLANE ---
+
+  845.0   1.066  0.97051E+00 0.48435E-01 0.76330E+00   0.97209E+00   0.48435E-01 0.76330E+00
+  846.0   1.060  0.96869E+00 0.48283E-01 0.76181E+00   0.97026E+00   0.48283E-01 0.76181E+00
+  847.0   1.036  0.95463E+00 0.47565E-01 0.75074E+00   0.95618E+00   0.47565E-01 0.75074E+00
+  848.0   1.035  0.94339E+00 0.46712E-01 0.74161E+00   0.94492E+00   0.46712E-01 0.74161E+00
+  849.0   1.006  0.91682E+00 0.45275E-01 0.72059E+00   0.91830E+00   0.45275E-01 0.72059E+00
+  850.0   0.963  0.87941E+00 0.43330E-01 0.69109E+00   0.88083E+00   0.43330E-01 0.69109E+00
+  851.0   1.026  0.92597E+00 0.45350E-01 0.72741E+00   0.92747E+00   0.45350E-01 0.72741E+00
+  852.0   1.016  0.92160E+00 0.45071E-01 0.72391E+00   0.92308E+00   0.45071E-01 0.72391E+00
+  853.0   0.973  0.89268E+00 0.43684E-01 0.70122E+00   0.89411E+00   0.43684E-01 0.70122E+00
+  854.0   0.844  0.76609E+00 0.37263E-01 0.60156E+00   0.76732E+00   0.37263E-01 0.60156E+00
+  855.0   0.921  0.84837E+00 0.41342E-01 0.66624E+00   0.84973E+00   0.41342E-01 0.66624E+00
+  856.0   1.010  0.92364E+00 0.44802E-01 0.72515E+00   0.92513E+00   0.44802E-01 0.72515E+00
+  857.0   1.028  0.94896E+00 0.46039E-01 0.74503E+00   0.95048E+00   0.46039E-01 0.74503E+00
+  858.0   1.022  0.94005E+00 0.45438E-01 0.73787E+00   0.94155E+00   0.45438E-01 0.73787E+00
+  859.0   1.021  0.94270E+00 0.45506E-01 0.73989E+00   0.94420E+00   0.45506E-01 0.73989E+00
+  860.0   1.021  0.94664E+00 0.45637E-01 0.74293E+00   0.94816E+00   0.45637E-01 0.74293E+00
+  861.0   1.016  0.94058E+00 0.45206E-01 0.73802E+00   0.94207E+00   0.45206E-01 0.73802E+00
+  862.0   1.031  0.95661E+00 0.45892E-01 0.75052E+00   0.95813E+00   0.45892E-01 0.75052E+00
+  863.0   1.056  0.97913E+00 0.46851E-01 0.76806E+00   0.98068E+00   0.46851E-01 0.76806E+00
+  864.0   1.003  0.93007E+00 0.44392E-01 0.72947E+00   0.93155E+00   0.44392E-01 0.72947E+00
+  865.0   0.993  0.92234E+00 0.43923E-01 0.72331E+00   0.92380E+00   0.43923E-01 0.72331E+00
+  866.0   0.893  0.82944E+00 0.39400E-01 0.65036E+00   0.83076E+00   0.39400E-01 0.65036E+00
+  867.0   0.932  0.86568E+00 0.41019E-01 0.67867E+00   0.86705E+00   0.41019E-01 0.67867E+00
+  868.0   1.014  0.94209E+00 0.44528E-01 0.73846E+00   0.94357E+00   0.44528E-01 0.73846E+00
+  869.0   0.993  0.92266E+00 0.43504E-01 0.72313E+00   0.92412E+00   0.43504E-01 0.72313E+00
+  870.0   1.021  0.94907E+00 0.44638E-01 0.74371E+00   0.95056E+00   0.44638E-01 0.74371E+00
+  871.0   1.007  0.93601E+00 0.43907E-01 0.73336E+00   0.93748E+00   0.43907E-01 0.73336E+00
+  872.0   1.003  0.93307E+00 0.43667E-01 0.73096E+00   0.93454E+00   0.43667E-01 0.73096E+00
+  873.0   1.001  0.93133E+00 0.43476E-01 0.72949E+00   0.93279E+00   0.43476E-01 0.72949E+00
+  874.0   0.989  0.92038E+00 0.42857E-01 0.72080E+00   0.92182E+00   0.42857E-01 0.72080E+00
+  875.0   0.969  0.90137E+00 0.41856E-01 0.70579E+00   0.90278E+00   0.41856E-01 0.70579E+00
+  876.0   0.980  0.91030E+00 0.42150E-01 0.71267E+00   0.91172E+00   0.42150E-01 0.71267E+00
+  877.0   0.989  0.92036E+00 0.42524E-01 0.72045E+00   0.92180E+00   0.42524E-01 0.72045E+00
+  878.0   1.001  0.92893E+00 0.42777E-01 0.72701E+00   0.93037E+00   0.42777E-01 0.72701E+00
+  879.0   0.985  0.91497E+00 0.42034E-01 0.71599E+00   0.91640E+00   0.42034E-01 0.71599E+00
+  880.0   0.964  0.89607E+00 0.41072E-01 0.70111E+00   0.89746E+00   0.41072E-01 0.70111E+00
+
+Wavelength Range =  280.0 to 4000.0 nm;  Number of Wavelengths =  2002
+
+*** BROADBAND IRRADIANCES (W/m2):
+
+* DIRECT BEAM AT NORMAL INCIDENCE:
+  Extraterrestrial = 1391.02   Terrestrial =  896.89   Atmospheric Transmittance = 0.6448
+
+* FOR THE HORIZONTAL PLANE:
+  Direct Beam =  660.64   Diffuse =  97.91   Global =  758.55   Clearness index, KT = 0.5381
+  Diffuse irradiance origination details:
+   Sky diffuse =  91.96   Back-scattered diffuse =   5.95
+
+* EXPERIMENTAL (WITH CIRCUMSOLAR CORRECTION):
+  Direct Beam, Normal Incidence =  898.98   Diffuse Horizontal =  96.37   Global Horizontal =  758.55
+
+
+
+
+*** ILLUMINANCES (klux) obtained with the Vlambda curve from CIE 1988:
+ E.T. = 138.43  BEAM NORMAL = 104.24  DIFFUSE HORIZONTAL =   13.32  GLOBAL HORIZONTAL =   90.11  GLOBAL TILT =   90.11
+
+*** PHOTOSYNTHETIC IRRADIANCE (W/m2) for 400-700 nm:
+ BEAM NORMAL = 402.69  DIFFUSE HORIZONTAL =  60.86  GLOBAL HORIZONTAL = 357.47  GLOBAL TILT = 357.47
+
+*** PHOTOSYNTHETIC PHOTON FLUX DENSITY (\B5mol m-2 s-1) for 400-700 nm:
+ BEAM NORMAL = 1856.1  DIFFUSE HORIZONTAL =  261.3  GLOBAL HORIZONTAL = 1628.5  GLOBAL TILT = 1628.5
+
+      ILLUMINANCES WITH CIRCUMSOLAR CORRECTION (klux):
+       BEAM NORMAL = 104.55   DIFFUSE =   13.10
+
+*** LUMINOUS EFFICACY (lm/W):
+ E.T. =  98.20   BEAM = 116.229   DIFFUSE = 136.086   GLOBAL = 118.792   GLOBAL TILT = 118.792
+
+      LUMINOUS EFFICACY WITH CIRCUMSOLAR CORRECTION (lm/W):
+       BEAM = 116.301   DIFFUSE = 135.908
+
